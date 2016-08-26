@@ -1,0 +1,19 @@
+{application, iserve,
+ [
+  {description,"Web Server"},
+  {vsn, "1"},
+  {modules, [	iserve_sup, 
+  				iserve_app,
+  				iserve_server,
+  				iserve_socket,
+  				iserve]},
+  {registered, [iserve_sup]},
+  {applications, [
+                  kernel,
+                  stdlib,
+                  sasl,
+                  mnesia
+                 ]},
+  {mod, { iserve_app, []}},
+  {env, []}
+ ]}.
